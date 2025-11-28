@@ -746,7 +746,6 @@ const App: React.FC<AppProps> = ({ initialLanguage, initialPersona }) => {
           </div>
       );
   };
-
   // --- JSX Rendering ---
   return (
     <div className={`flex h-screen overflow-hidden ${language === 'ar' ? 'font-arabic' : 'font-sans'}`}>
@@ -901,7 +900,6 @@ const App: React.FC<AppProps> = ({ initialLanguage, initialPersona }) => {
                 <div className="pb-32">
                 {currentSession.messages.map((msg, index) => {
                     const isUser = msg.role === 'user';
-                    const isLast = index === currentSession.messages.length - 1;
                     const modelConfig = MODEL_CONFIGS[msg.modelUsed || 'Lunaris-Mind'] || MODEL_CONFIGS['Lunaris-Mind'];
                     
                     return (
@@ -1018,10 +1016,7 @@ const App: React.FC<AppProps> = ({ initialLanguage, initialPersona }) => {
             )}
             </div>
 
-                    )} 
-            </div>
-
-      {/* Input Area */} 
+            {/* Input Area */}
             <div className={`absolute bottom-6 ${showCanvas ? 'left-0 right-0 md:right-auto md:w-full' : 'left-0 right-0'} px-4 z-30 pointer-events-none`}>
             <div className="max-w-3xl mx-auto pointer-events-auto relative">
                 
@@ -1092,7 +1087,7 @@ const App: React.FC<AppProps> = ({ initialLanguage, initialPersona }) => {
             </div>
          </div>
 
-         /* CANVAS PANEL */
+         {/* CANVAS PANEL */}
          {showCanvas && (
              <div className="absolute inset-0 z-50 md:relative md:z-auto md:w-1/2 h-full shadow-2xl md:shadow-none">
                  <CanvasPanel content={canvasContent} type={canvasType} onClose={() => setShowCanvas(false)} />
