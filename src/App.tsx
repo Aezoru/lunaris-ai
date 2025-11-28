@@ -1533,6 +1533,11 @@ const App: React.FC = () => {
                                 )}
                                 
                                 {msg.role === 'user' && (
-                                    <button 
-                                        onClick={() => handleEditMessage(msg.id, msg.content)}
-                                        className="ml-2 p-1 rounded opacity-0 group-hover:opacity-100 hover:bg-slate-100 dark:hover:bg-slate-800 transition-all tex
+                                    <button
+  onClick={() => handleEditMessage(msg.id, msg.content)}
+  className="ml-2 p-1 rounded opacity-0 group-hover:opacity-100 hover:bg-slate-100"
+>
+  {/* ضع الأيقونة أو المحتوى هنا */}
+</button>
+                          }
+export default App; 
