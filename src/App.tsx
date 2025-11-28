@@ -1220,5 +1220,11 @@ const App: React.FC = () => {
                <span className="text-xs font-medium text-slate-600 dark:text-slate-300">{language === 'ar' ? 'رفع ملف' : 'Upload'}</span>
            </button>
            
-           <button onClick={() => setIsDeepThink(!isDeepThink)} className={`flex flex-col items-center justify-center gap-2 p-3 rounded-xl transition-all h-24 border ${isDeepThink ? 'bg-violet-50 dark:bg-violet-900/20 border-violet-200 dark:border-violet-800' : 'hover:bg-slate-100 dark:hover:bg-slate-800 border-transparent hover:border-slate-200 dark:hover:border-slate-700'}`}>
-               <div className={`w-10 h-10 rounded-full flex items-
+           <button
+  onClick={() => setIsDeepThink(!isDeepThink)}
+  className={`flex flex-col items-center justify-center gap-2`}
+>
+  <div className={`w-10 h-10 rounded-full flex items-center justify-center`}>
+    {/* inner content */}
+  </div>
+</button>
