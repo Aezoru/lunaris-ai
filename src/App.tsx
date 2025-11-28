@@ -1053,7 +1053,7 @@
                                         {msg.modelUsed === 'Lunaris-Mind' ? 'Lunaris Mind (Auto)' : modelConfig.label}
                                     </div>
                                 </div>
-                            )}
+                        )}
 
                             {msg.suggestedReplies && msg.suggestedReplies.length > 0 && (
                                 <div className="flex flex-wrap gap-2 mt-3 animate-fade-in">
@@ -1146,9 +1146,7 @@
                     >
                         {isLoading || isGeneratingMedia ? <Loader2 size={24} className="animate-spin" /> : <ArrowUp size={24} />}
                     </button>
-                </div>
-            </div>
-            </div>
+                </div> 
          </div>
 
          {/* CANVAS PANEL */}
@@ -1157,9 +1155,8 @@
                  <CanvasPanel content={canvasContent} type={canvasType} onClose={() => setShowCanvas(false)} />
              </div>
          )}
-      </div>
-    </div>
+      </div> 
   );
-};
-
+}
+           
 export default App;
